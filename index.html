@@ -14,7 +14,7 @@
 	<body>
 		<div class="top-header">
 			<h1 class="plutus-header">Plutus Design Sync-up</h1>
-			<h2 class="plutus-subheader1">11 Mar 2022</h2>
+			<h2 class="plutus-subheader1" id="current-date"></h2>
 			<!-- <h3 class="plutus-subheader2"></h3> -->
 		</div>
 
@@ -340,6 +340,11 @@
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
+			const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+			const d = new Date();
+			const date = d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear(); 
+			document.getElementById('current-date').innerHTML = date;
+
 			Reveal.initialize({
 				hash: true,
 
